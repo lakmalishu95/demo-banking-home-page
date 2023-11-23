@@ -1,151 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RHB Bank Demo</title>
-    <script
-      id="pega-wm-chat"
-      src="https://widget.use1.chat.pega.digital/f8fc2ba5-8f98-4d55-9f71-6a7d8b40aece/widget.js"
-    ></script>
+    <script id="pega-wm-chat"
+        src="https://widget.use1.chat.pega.digital/f8fc2ba5-8f98-4d55-9f71-6a7d8b40aece/widget.js"></script>
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-      }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
 
-      header {
-        background-color: #1a1a1a;
-        color: #fff;
-        padding: 1em 0;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
+        header {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 1em 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-      .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-      .center {
-        justify-content: center;
-      }
+        .center {
+            justify-content: center;
+        }
 
-      .logo {
-        font-size: 1.5em;
-        font-weight: bold;
-        color: #fff;
-        text-decoration: none;
-      }
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
 
-      nav {
-        display: flex;
-        align-items: center;
-      }
+        nav {
+            display: flex;
+            align-items: center;
+        }
 
-      nav a {
-        color: #fff;
-        text-decoration: none;
-        margin: 0 15px;
-        font-weight: bold;
-        transition: color 0.3s;
-      }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
 
-      nav a:hover {
-        color: lightskyblue;
-      }
+        nav a:hover {
+            color: lightskyblue;
+        }
 
-      .button {
-        display: inline-block;
-        padding: 10px 20px;
-        text-decoration: none;
-        background-color: lightskyblue;
-        color: #1a1a1a;
-        border-radius: 5px;
-        font-weight: bold;
-        transition: background-color 0.3s;
-      }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            background-color: lightskyblue;
+            color: #1a1a1a;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
 
-      .button:hover {
-        background-color: ;
-      }
+        .button:hover {
+            background-color: ;
+        }
 
-      main {
-        padding: 20px;
-      }
+        main {
+            padding: 20px;
+        }
 
-      .hero-section {
-        background-image: url("heroImage.jpg");
-        background-size: cover;
-        background-position: center;
-        color: #fff;
-        text-align: center;
-        padding: 100px 0;
-      }
+        .hero-section {
+            background-image: url('heroImage.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+        }
 
-      .hero-content {
-        max-width: 800px;
-        margin: 0 auto;
-      }
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
-      .hero-content h1 {
-        font-size: 2.5em;
-        margin-bottom: 20px;
-      }
+        .hero-content h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
 
-      .hero-content p {
-        font-size: 1.2em;
-        margin-bottom: 30px;
-      }
+        .hero-content p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
 
-      footer {
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        text-align: center;
-        padding: 1em;
-        background-color: #1a1a1a;
-        color: #fff;
-      }
+        .hidden {
+            display: none;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            text-align: center;
+            padding: 1em;
+            background-color: #1a1a1a;
+            color: #fff;
+        }
     </style>
-  </head>
+</head>
 
-  <body>
+<body>
+
     <header>
-      <div class="container">
-        <a href="#" class="logo"
-          ><img src="logo.png" alt="RHB Bank" width="100px"
-        /></a>
-        <nav>
-          <a href="#">Home</a>
-          <a href="#">Accounts</a>
-          <a href="#">Services</a>
-          <a href="#">Contact</a>
-        </nav>
-        <a href="#" class="button">Login</a>
-      </div>
+        <div class="container">
+            <a href="#" class="logo"><img src="logo.png" alt="RHB Bank" width="100px"></a>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Accounts</a>
+                <a href="#">Services</a>
+                <a href="#" id="contactButton">Contact</a>
+            </nav>
+            <a href="#" class="button">Login</a>
+        </div>
     </header>
 
-    <div class="hero-section">
-      <div class="hero-content">
-        <h1>Welcome to RHB Bank</h1>
-        <p>Experience seamless online banking for all your financial needs.</p>
-        <a href="#" class="button">Get Started</a>
-      </div>
+    <div id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1>Welcome to RHB Bank</h1>
+            <p>Experience seamless online banking for all your financial needs.</p>
+            <a href="#" class="button">Get Started</a>
+        </div>
     </div>
 
+    <script
+        src='https://crm.pegatsdemo.com/prweb?pzuiactionzzz=CXtpbn1OUno1Y3owOTB3U1pYTnFBSCs1djdEL3NWckIvMFE0OFNEdXVzaXNpc0VPM2d5VjZrcGhkNGdML2FLdC9IRnBB*'>
+    </script>
+    <div id="pega-content" class="hidden" data-pega-encrypted='true'
+        data-pega-encrypted-hash='pzuiactionzzz=CXtpbn1wd29XMTVqNGRQcE9Xd0dGQmtNVVZPTk5DeituMTFVclVRUnNUbHlwYlNxb2tkMkFJQ0kzR09RN1ZBSVhGdmwrNXArVEVSTkZRYzZBSThmNUxTQ3N0UkJIVU1JUG5rWGFWL3R3T29PSHZaWSs3bDRWV3RDL1hyb2pPOCtkQ1hBL2tGOEIzWjJGc2xneVZTbm9iYlNoVjNOWXJkMXRIeTVBTU8vcktiaWZ3YnVkZldoV0ZuNThEeTFrVFNRK2pibjJjaWR3ditrYzFmRWFVUnpVRmN5WGxQdjUyUUdkL0pHMk92cWI0RVZjUmlneGZUelZFYUJYYWlkMnROd3VlUXdlUGNLMUdCVkQrS2wvV2VmL0NXQjFtT04wRVZXZFlUcHdLNjc4a1h5Uy9INlBNeFNsaTZwbldTcVlyZWVWbjNpaA%3D%3D*'
+        data-pega-gadgetname='PegaGadget' data-pega-action='createNewWork'
+        data-pega-action-param-classname='RHB-RBN-Work-Lead' data-pega-action-param-flowname=''
+        data-pega-isretained='false' data-pega-isdeferloaded='false' data-pega-applicationname='CRM'
+        data-pega-threadname='MashupTest1' data-pega-channelID='MASHUP3933754cf28e4be0b4976fc2a5ec0838'
+        data-pega-resizetype='stretch' data-pega-url='https://crm.pegatsdemo.com/prweb'
+        data-pega-action-param-parameters='{"pzSkinName":"CRM","pyMashupSkeletonName":"pyDefaultMashupSkeleton"}'>
+    </div>
+
+    <!-- ********************** End Pega content ********************** -->
+
+    <script>
+        pega.web.api.setAuthenticationParameters("PegaGadget", {
+            UserIdentifier: "Supervisor1@RHB.Com",
+            Password: btoa("Supervisor1@RHB.Com")
+        });
+    </script>
+
     <main>
-      <div class="container center">
-        <p>Manage your accounts online anytime, anywhere.</p>
-      </div>
+        <div class="container center">
+            <p>Manage your accounts online anytime, anywhere.</p>
+        </div>
     </main>
 
-    <footer>&copy; 2023 RHB Bank. All rights reserved.</footer>
-  </body>
+    <footer>
+        &copy; 2023 RHB Bank. All rights reserved.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const heroSection = document.querySelector('#hero');
+            const pegaContent = document.getElementById("pega-content");
+            const contactButton = document.getElementById('contactButton');
+
+            contactButton.addEventListener('click', function () {
+                // Toggle the 'hidden' class on the hero section
+                heroSection.classList.toggle('hidden');
+                pegaContent.classList.toggle('hidden');S
+            });
+        });
+    </script>
+
+</body>
+
 </html>
